@@ -1,0 +1,109 @@
+@import 'variables';
+@import 'mixin';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 8rem;
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+        h3{
+            font-size: 2rem;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                margin: 0 1rem 0;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        .top-section{
+            display: flex;
+            .left-section{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h2{
+                    font-family: $h2-font;
+                    font-size: 55px;
+                    line-height: 70px;
+                    letter-spacing: 10px;
+                    .half-background{
+                        @include half-background($bg-primary);
+                    }
+                }
+                p{
+                    color: $color-primary;
+                    line-height: 2rem;
+                    font-size: 1.5rem;
+                    padding-right: 2rem;
+                }
+                .btns{
+                    
+                    .btn{
+                        border-radius: 5px;
+                        background-color: $bg-primary;
+                        height: 50px;
+                        width: 100px;
+                        border: black 1px dashed;
+                    }
+                    .sign-in{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+        .bottom-section{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            .cards{
+                display: flex;
+                flex-direction: column;
+                background-color: $bg-secondary;
+                // height: 280px;
+                width: 350px;
+                padding: 0.5rem 1rem 3rem;
+                .number{
+                    @include circle;
+                    margin-bottom: 10px;
+                }
+                .half-background{
+                    @include half-background($bg-primary)
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        .social{
+            display: flex;
+            // align-items: center;
+            img{
+                @include circle;
+                margin-left: 20px;
+            }
+        }
+    }
+}

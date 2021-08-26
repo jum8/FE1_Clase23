@@ -1,0 +1,13 @@
+@mixin circle {
+    border-radius: 50%;
+    border: 1px black solid;
+    box-shadow: -5px 0px $bg-primary;
+    height: 34px;
+    padding: 6px;
+    width: 34px;
+    text-align: center;
+}
+
+@mixin half-background ($color) {
+    background: linear-gradient(to bottom, $color 50%, transparent 50%);
+}
